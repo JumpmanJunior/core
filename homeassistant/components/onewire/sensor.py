@@ -184,14 +184,16 @@ DEVICE_SENSORS: dict[str, tuple[OneWireSensorEntityDescription, ...]] = {
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         OneWireSensorEntityDescription(
-            key="IAD",
+            key="vis",
             device_class=DEVICE_CLASS_CURRENT,
             entity_registry_enabled_default=False,
-            name="Current",
-            native_unit_of_measurement=ELECTRIC_CURRENT_AMPERE,
+            name="Current vis",
+            native_unit_of_measurement=ELECTRIC_POTENTIAL_VOLT,
             read_mode=READ_MODE_FLOAT,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        
+        Current
     ),
     "28": (SIMPLE_TEMPERATURE_SENSOR_DESCRIPTION,),
     "3B": (SIMPLE_TEMPERATURE_SENSOR_DESCRIPTION,),
